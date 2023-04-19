@@ -7,7 +7,7 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/presnalex/codec-bytes v0.0.1
-	github.com/presnalex/go-micro/v3 v3.0.11
+	github.com/presnalex/go-micro/v3 v3.0.13
 	github.com/presnalex/statscheck v0.0.1
 	github.com/prometheus/client_golang v1.12.1 // indirect
 	github.com/stretchr/testify v1.8.0
