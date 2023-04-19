@@ -21,7 +21,7 @@ postgres:12
 docker build --no-cache --network=host ../migration/goose
 
 # run kafka
-docker run -d --rm --name kafka -p 9092:9092 -p 2181:2181 -e ADVERTISED_HOST=127.0.0.1 -e KAFKA_CREATE_TOPICS="animaladd:1:1" spotify/kafka
+docker run -d --rm --name kafka -p 9092:9092 -p 2181:2181 -e ADVERTISED_HOST=127.0.0.1 -e KAFKA_CREATE_TOPICS="animaladd:1:1" -e KAFKA_CREATE_TOPICS="animaladdrs:1:1" spotify/kafka
 
 # Set consul configuration
 root="go-micro-layouts"
