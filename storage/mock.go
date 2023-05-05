@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
-	victoriametrics "github.com/presnalex/go-micro/v3/wrapper/requestid"
+	"github.com/presnalex/go-micro/v3/wrapper/requestid"
 	"github.com/stretchr/testify/mock"
 	"go.unistack.org/micro/v3/client"
 	"go.unistack.org/micro/v3/metadata"
@@ -66,7 +66,7 @@ func NewContext() context.Context {
 	id := uid.String()
 	md := make(metadata.Metadata)
 	ctx = metadata.NewIncomingContext(ctx, md)
-	ctx = victoriametrics.SetIncomingRequestId(ctx, id)
-	ctx = victoriametrics.SetOutgoingRequestId(ctx, id)
+	ctx = requestid.SetIncomingRequestId(ctx, id)
+	ctx = requestid.SetOutgoingRequestId(ctx, id)
 	return ctx
 }
